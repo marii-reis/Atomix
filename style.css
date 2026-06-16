@@ -1,0 +1,308 @@
+
+
+/*julia*/
+
+:root {
+  --azul-forte:   #1d4ed8;   /* Botões, destaques */
+  --azul-medio:   #3b82f6;   /* Bordas, hover */
+  --azul-claro:   #dbeafe;   /* Fundo de fórmulas, escala */
+  --cinza-escuro: #374151;   /* Texto principal */
+  --cinza-medio:  #6b7280;   /* Texto secundário */
+  --cinza-claro:  #f3f4f6;   /* Fundo da página */
+  --cinza-borda:  #d1d5db;   /* Bordas de inputs */
+  --branco:       #ffffff;   /* Fundo dos cards */
+}
+
+
+/* Remove margens navegador. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; 
+  background-color: var(--cinza-claro);
+  color: var(--cinza-escuro);
+  min-height: 100vh; /* deixa na tela toda */
+}
+
+
+/* cabeçalho */
+.cabecalho {
+  background-color: var(--azul-forte);
+  color: var(--branco);
+  padding: 24px 32px;
+  text-align: center;
+}
+
+.cabecalho-conteudo {
+  max-width: 900px;
+  margin: 0 auto; 
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; 
+  margin-bottom: 6px;
+}
+
+.logo-icone {
+  font-size: 36px;
+}
+
+.logo-nome {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px; 
+}
+
+.cabecalho-subtitulo {
+  font-size: 14px;
+  opacity: 0.85; /* deixa transparentinho */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* parte principal */
+.principal {
+  max-width: 960px;
+  margin: 0 auto;      
+  padding: 40px 24px;
+}
+
+
+
+.boas-vindas {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.titulo-principal {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--cinza-escuro);
+  margin-bottom: 8px;
+}
+
+.descricao {
+  font-size: 15px;
+  color: var(--cinza-medio);
+}
+
+/*davi*/
+/*computador duas culunas */
+.grade-calculadoras {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 24px;
+}
+
+/* celular vira 1 coluna */
+@media (max-width: 700px) {
+  .grade-calculadoras {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*daphini*/
+/*caixa branca */
+.card {
+  background-color: var(--branco);
+  border-radius: 12px;
+  padding: 28px;
+  border: 1px solid var(--cinza-borda);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); 
+  display: flex;
+  flex-direction: column; 
+  gap: 18px;
+}
+
+/* Topo do caixa */
+.card-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid var(--azul-claro); 
+  padding-bottom: 14px;
+}
+
+.card-icone {
+  font-size: 28px;
+}
+
+.card-titulo {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--azul-forte);
+}
+
+.card-descricao {
+  font-size: 14px;
+  color: var(--cinza-medio);
+  line-height: 1.6;
+}
+
+
+/* formula */
+.formula {
+  background-color: var(--azul-claro);
+  border-left: 4px solid var(--azul-medio);
+  border-radius: 6px;
+  padding: 10px 16px;
+}
+
+.formula-texto {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--azul-forte);
+  font-family: 'Courier New', monospace; 
+}
+
+
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cinza-escuro);
+}
+/*mari/*
+/* arredonda, centraliza e tipo de linha */
+.campo-input {
+  padding: 10px 14px;
+  border: 1.5px solid var(--cinza-borda);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--cinza-escuro);
+  background-color: var(--branco);
+}
+
+/* Destaca qnd clica */
+.campo-input:focus {
+  border-color: var(--azul-medio);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+/*destaca no mouse*/
+.campo-select {
+  cursor: pointer;
+}
+/*paulo*/
+
+/* botao */
+.botao {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--azul-forte);
+  color: var(--branco);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;        
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efeito  mouse */
+.botao:hover {
+  background-color: var(--azul-medio);
+}
+
+/* Efeito  clicar */
+.botao:active {
+  transform: scale(0.98);
+}
+
+
+/* ---- Caixinha de resultado ---- */
+.resultado {
+  background-color: var(--cinza-claro);
+  border: 1px solid var(--cinza-borda);
+  border-left: 4px solid var(--cinza-borda); 
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--cinza-medio);
+  line-height: 1.7;
+  transition: border-left-color 0.3s; 
+}
+
+.resultado strong {
+  color: var(--azul-forte);
+  font-size: 16px;
+}
+
+
+
+.escala-ph {
+  margin-top: 4px;
+}
+
+.escala-titulo {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cinza-medio);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.escala-barra {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden; 
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.escala-acido {
+  flex: 6;             
+  background-color: #fee2e2; 
+  color: #b91c1c;
+  padding: 8px 4px;
+  line-height: 1.4;
+}
+
+.escala-neutro {
+  flex: 1;              
+  background-color: #fef9c3; 
+  color: #92400e;
+  padding: 8px 4px;
+  line-height: 1.4;
+}
+
+.escala-basico {
+  flex: 7;             
+  background-color: var(--azul-claro);
+  color: var(--azul-forte);
+  padding: 8px 4px;
+  line-height: 1.4;
+}
+
+
+/* rodape */
+.rodape {
+  text-align: center;
+  padding: 24px;
+  background-color: var(--branco);
+  border-top: 1px solid var(--cinza-borda);
+  color: var(--cinza-medio);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.rodape-aviso {
+  font-size: 11px;
+  opacity: 0.7;
+}

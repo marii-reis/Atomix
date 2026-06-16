@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- julia e rafa -->
+<head>
+<!-- idioma e adaptar tamanho -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atomix - Calculadora Química</title>
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- cabeçalho -->  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <div class="logo">
+        <span class="logo-icone">⚗️</span>
+        <span class="logo-nome">Atomix</span>
+      </div>
+      <p class="cabecalho-subtitulo">Calculadora Química Simplificada</p>
+    </div>
+  </header>
+
+<!-- corpo --> 
+  <main class="principal">
+    <section class="boas-vindas">
+      <h1 class="titulo-principal">Bem-vindo ao Atomix</h1>
+      <p class="descricao">Escolha uma calculadora abaixo para começar seus cálculos químicos.</p>
+    </section>
+<!-- divisao das calculadoras -->
+    <div class="grade-calculadoras">
+
+<!-- ph -->
+      <div class="card">
+        <div class="card-topo">
+          <span class="card-icone">🧪</span>
+          <h2 class="card-titulo">Balanceamento de pH</h2>
+        </div>
+
+        <p class="card-descricao">
+          Calcule o pH de uma solução a partir da concentração de íons H⁺.
+        </p>
+
+
+        <div class="formula">
+          <span class="formula-texto">pH = -log [H⁺]</span>
+        </div>
+
+        <div class="campo-grupo">
+          <label class="campo-label" for="concentracao">
+            Concentração de H⁺ (mol/L)
+          </label>
+          <input
+            class="campo-input"
+            type="number"
+            id="concentracao"
+            placeholder="Ex: 0.001"
+            step="any"
+            min="0"
+          />
+        </div>
+
+        <button class="botao" onclick="calcularPH()">
+          Calcular pH
+        </button>
+
+        <div class="resultado" id="resultado-ph">
+          O resultado aparecerá aqui.
+        </div>
+
+        <div class="escala-ph">
+          <p class="escala-titulo">Escala de pH</p>
+          <div class="escala-barra">
+            <div class="escala-acido">Ácido<br/>0–6</div>
+            <div class="escala-neutro">Neutro<br/>7</div>
+            <div class="escala-basico">Básico<br/>8–14</div>
+          </div>
+        </div>
+      </div>
+<!-- fim ph -->
+<!-- massa molar -->
+
+     <!-- daphini e mari -->
+      <div class="card">
+        <div class="card-topo">
+          <span class="card-icone">⚖️</span>
+          <h2 class="card-titulo">Massa Molar</h2>
+        </div>
+
+        <p class="card-descricao">
+          Calcule a massa molar de compostos comuns. Selecione um composto ou informe a massa manualmente.
+        </p>
+
+
+        <div class="formula">
+          <span class="formula-texto">M = Σ (massa atômica × quantidade)</span>
+        </div>
+
+
+        <div class="campo-grupo">
+          <label class="campo-label" for="composto">
+            Selecione um composto comum
+          </label>
+          <select class="campo-input campo-select" id="composto" onchange="preencherMassa()">
+            <option value="">-- Escolha um composto --</option>
+            <option value="18.015">H₂O — Água (18,015 g/mol)</option>
+            <option value="44.010">CO₂ — Dióxido de carbono (44,010 g/mol)</option>
+            <option value="58.443">NaCl — Cloreto de sódio (58,443 g/mol)</option>
+            <option value="98.079">H₂SO₄ — Ácido sulfúrico (98,079 g/mol)</option>
+            <option value="36.461">HCl — Ácido clorídrico (36,461 g/mol)</option>
+            <option value="40.000">NaOH — Hidróxido de sódio (40,000 g/mol)</option>
+          </select>
+        </div>
+
+        <div class="campo-grupo">
+          <label class="campo-label" for="moles">
+            Quantidade de moles (mol)
+          </label>
+          <input
+            class="campo-input"
+            type="number"
+            id="moles"
+            placeholder="Ex: 2"
+            step="any"
+            min="0"
+          />
+        </div>
+
+
+        <div class="campo-grupo">
+          <label class="campo-label" for="massa-molar">
+            Massa molar (g/mol) 
+          </label>
+          <input
+            class="campo-input"
+            type="number"
+            id="massa-molar"
+            placeholder="Ex: 18.015"
+            step="any"
+            min="0"
+          />
+        </div>
+
+        <button class="botao">
+          Calcular Massa
+        </button>
+
+        <div class="resultado" id="resultado-massa">
+          O resultado aparecerá aqui.
+        </div>
+      </div>
+    </div>
+    
+    <!-- fim -->
+     <!-- base do site  -->
+    <!-- paulo -->
+
+  </main>
+
+  <footer class="rodape">
+    <p>© 2026 Atomix — Calculadora Química para Estudantes</p>
+    <p class="rodape-aviso">Valores para fins educacionais.</p>
+  </footer>
+
+
+</body>
+</html>
