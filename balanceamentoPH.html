@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+
+        <main>
+        <div class="card">
+            <div class="card-topo">
+              <span class="card-icone">🧪</span>
+              <h2 class="card-titulo">Balanceamento de pH</h2>
+            </div>
+    
+            <p class="card-descricao">
+              Calcule o pH de uma solução a partir da concentração de íons H⁺.
+            </p>
+    
+    
+            <div class="formula">
+              <span class="formula-texto">pH = -log [H⁺]</span>
+            </div>
+    
+            <div class="campo-grupo">
+              <label class="campo-label" for="concentracao">
+                Concentração de H⁺ (mol/L)
+              </label>
+              <input
+                class="campo-input"
+                type="number"
+                id="concentracao"
+                placeholder="Ex: 0.001"
+                step="any"
+                min="0"
+              />
+            </div>
+    
+            <button class="botao" onclick="calcularPH()">
+              Calcular pH
+            </button>
+    
+            <div class="resultado" id="resultado-ph">
+              O resultado aparecerá aqui.
+            </div>
+    
+            <div class="escala-ph">
+              <p class="escala-titulo">Escala de pH</p>
+              <div class="escala-barra">
+                <div class="escala-acido">Ácido<br/>0–6</div>
+                <div class="escala-neutro">Neutro<br/>7</div>
+                <div class="escala-basico">Básico<br/>8–14</div>
+              </div>
+            </div>
+          </div>
+          </main>
+    </body>
+</html>

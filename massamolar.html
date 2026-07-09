@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+        <div class="card">
+            <div class="card-topo">
+              <span class="card-icone">⚖️</span>
+              <h2 class="card-titulo">Massa Molar</h2>
+            </div>
+    
+            <p class="card-descricao">
+              Calcule a massa molar de compostos comuns. Selecione um composto ou informe a massa manualmente.
+            </p>
+    
+    
+            <div class="formula">
+              <span class="formula-texto">M = Σ (massa atômica × quantidade)</span>
+            </div>
+    
+    
+            <div class="campo-grupo">
+              <label class="campo-label" for="composto">
+                Selecione um composto comum
+              </label>
+              <select class="campo-input campo-select" id="composto" onchange="preencherMassa()">
+                <option value="">-- Escolha um composto --</option>
+                <option value="18.015">H₂O — Água (18,015 g/mol)</option>
+                <option value="44.010">CO₂ — Dióxido de carbono (44,010 g/mol)</option>
+                <option value="58.443">NaCl — Cloreto de sódio (58,443 g/mol)</option>
+                <option value="98.079">H₂SO₄ — Ácido sulfúrico (98,079 g/mol)</option>
+                <option value="36.461">HCl — Ácido clorídrico (36,461 g/mol)</option>
+                <option value="40.000">NaOH — Hidróxido de sódio (40,000 g/mol)</option>
+              </select>
+            </div>
+    
+            <div class="campo-grupo">
+              <label class="campo-label" for="moles">
+                Quantidade de moles (mol)
+              </label>
+              <input
+                class="campo-input"
+                type="number"
+                id="moles"
+                placeholder="Ex: 2"
+                step="any"
+                min="0"
+              />
+            </div>
+    
+    
+            <div class="campo-grupo">
+              <label class="campo-label" for="massa-molar">
+                Massa molar (g/mol) 
+              </label>
+              <input
+                class="campo-input"
+                type="number"
+                id="massa-molar"
+                placeholder="Ex: 18.015"
+                step="any"
+                min="0"
+              />
+            </div>
+    
+            <button class="botao">
+              Calcular Massa
+            </button>
+    
+            <div class="resultado" id="resultado-massa">
+              O resultado aparecerá aqui.
+            </div>
+          </div>
+        </div>
+    </main>
+    </body>
+</html>
