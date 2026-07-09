@@ -1,11 +1,7 @@
-
-
-/*julia*/
-
 :root {
   --azul-forte:   #1d4ed8;   /* Botões, destaques */
   --azul-medio:   #3b82f6;   /* Bordas, hover */
-  --azul-claro:   #d0eafe;   /* Fundo de fórmulas, escala */
+  --azul-claro:   #dbeafe;   /* Fundo de fórmulas, escala */
   --cinza-escuro: #374151;   /* Texto principal */
   --cinza-medio:  #6b7280;   /* Texto secundário */
   --cinza-claro:  #f3f4f6;   /* Fundo da página */
@@ -35,6 +31,29 @@ body {
   color: var(--branco);
   padding: 24px 32px;
   text-align: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    background-color: #1d4ed8;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.menu a:hover {
+    background-color: #1d4ed8;
 }
 
 .cabecalho-conteudo {
