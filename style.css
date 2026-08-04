@@ -331,7 +331,24 @@
     padding: 8px 4px;
     line-height: 1.4;
   }
-  
+
+   .upload-box {
+    width: 600px;
+    height: 240px;
+    margin: 50px auto;  
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
   
   /* rodape */
   .rodape {
