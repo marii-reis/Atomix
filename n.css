@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+header{
+    background-color: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Área onde fica o input e o botão */
+.entrada{
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+label{
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+input{
+    padding: 12px;
+    border: 2px solid #1d4ed8;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus{
+    border-color: #163fb3;
+}
+
+button{
+    padding: 12px 30px;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #163fb3;
+}
+
+.resultado{
+    border: 2px solid #1d4ed8;
+    border-radius: 8px;
+    padding: 25px;
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f8fbff;
+}
+
+.resultado h2{
+    color: #1d4ed8;
+    border-bottom: 2px solid #1d4ed8;
+    padding-bottom: 10px;
+}
+
+.resultado p{
+    font-size: 22px;
+}
