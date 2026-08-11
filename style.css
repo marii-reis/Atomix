@@ -396,7 +396,12 @@
     color: #000;
     cursor: pointer;
 }
-  
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   /* rodape */
   .rodape {
     text-align: center;
