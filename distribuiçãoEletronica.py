@@ -69,13 +69,17 @@ def massa_molar():
 def sobre():
     return render_template("sobre.html")
 
-@app.route("/balanceamentoPH.html")
+@app.route("/balanceamentoPH")
 def balanceamento_PH():
     return render_template("balanceamentoPH.html")
 
 @app.route("/equacoes")
 def equacoes():
     return render_template("equacoes.html")
+
+@app.route("/estequiometria")
+def estequiometria():
+    return render_template("estequimetria.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
