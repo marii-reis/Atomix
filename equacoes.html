@@ -1,51 +1,76 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <header class="cabecalho">
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanceamento de Equações - Atomix</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
         <nav>
             <ul class="menu">
                 <li><a href="/">Início</a></li>
             </ul>
         </nav>
-        </header>
-        <main>
+    </header>
+
+    <main class="principal pagina-distribuicao">
         <div class="card">
+
             <div class="card-topo">
-              <span class="card-icone">⚖️</span>
-              <h2 class="card-titulo">Balanceamento de Equações</h2>
+                <span class="card-icone">⚖️</span>
+                <h2 class="card-titulo">Balanceamento de Equações</h2>
             </div>
-    
+
             <p class="card-descricao">
-              Ajuste os coeficientes das equações para igualar o número de átomos.
+                Ajuste os coeficientes das equações para igualar o número de átomos.
             </p>
-    
-    
+
             <div class="formula">
-              <span class="formula-texto"> C + O₂ → CO₂ </span>
+                <span class="formula-texto">C + O₂ → CO₂</span>
             </div>
-    
-            <div class="campo-grupo">
-              <label class="campo-label" for="moles">
-                Digite as equações a serem balanceadas
-              </label>
-              <input
-                class="campo-input""
-                placeholder="Lembre-se de digitar o (+) entre elas"
-                step="any"
-              />
-            </div>
-    
-            <button class="botao">
-              Balancear
-            </button>
-    
-            <div class="resultado" id="resultado-massa">
-              O resultado aparecerá aqui.
-            </div>
-          </div>
+
+            <form method="POST" action="/equacoes">
+
+                <div class="campo-grupo">
+                    <label class="campo-label" for="equacao">
+                        Digite a equação a ser balanceada:
+                    </label>
+
+                    <input
+                        class="campo-input"
+                        type="text"
+                        id="equacao"
+                        name="equacao"
+                        placeholder="Ex.: H2 + O2 -> H2O"
+                        required
+                    >
+                </div>
+
+                <button class="botao" type="submit">
+                    Balancear
+                </button>
+
+            </form>
+
+            {% if resultado %}
+                <div class="resultado">
+                    <h2>Resultado</h2>
+                    <p>{{ resultado }}</p>
+                </div>
+            {% else %}
+                <div class="resultado">
+                    O resultado aparecerá aqui.
+                </div>
+            {% endif %}
+
         </div>
     </main>
-    </body>
+
+</body>
 </html>
+```

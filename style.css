@@ -521,3 +521,90 @@ button:hover{
     padding: 12px;
     text-align: center;
 }
+
+/* Layout da Distribuição Eletrônica */
+.pagina-distribuicao {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.pagina-distribuicao .card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 100%;
+    min-height: calc(100vh - 80px);
+    margin: 0;
+    padding: 28px;
+    border-radius: 8px;
+    background-color: var(--branco);
+}
+
+.pagina-distribuicao .card-topo {
+    width: 100%;
+}
+
+.pagina-distribuicao .card-descricao {
+    width: 100%;
+}
+
+.pagina-distribuicao .campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.pagina-distribuicao .campo-input {
+    width: 100%;
+}
+
+.pagina-distribuicao form {
+    width: 100%;
+}
+
+.pagina-distribuicao .botao {
+    width: 200px;
+    max-width: 100%;
+    padding: 12px;
+}
+
+.pagina-distribuicao .resultado {
+    width: 100%;
+    min-height: 150px;
+    margin-top: 0;
+}
+
+/* Ajuste exclusivo da página de Distribuição Eletrônica */
+main.pagina-distribuicao {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+main.pagina-distribuicao > .card {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: calc(100vh - 160px);
+    margin: 0 !important;
+    padding: 28px;
+    border-radius: 8px;
+}
+
+main.pagina-distribuicao .campo-grupo,
+main.pagina-distribuicao form,
+main.pagina-distribuicao .campo-input,
+main.pagina-distribuicao .resultado {
+    width: 100% !important;
+}
+
+main.pagina-distribuicao .resultado {
+    min-height: 150px;
+}

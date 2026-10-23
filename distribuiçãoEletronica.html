@@ -1,55 +1,75 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="cabecalho">
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuição Eletrônica - Atomix</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
         <nav>
             <ul class="menu">
                 <li><a href="/">Início</a></li>
             </ul>
         </nav>
-        </header>
-        <main>
+    </header>
+
+    <main class="principal pagina-distribuicao">
         <div class="card">
+
             <div class="card-topo">
-              <span class="card-icone">🧬</span>
-              <h2 class="card-titulo">Distribuição Eletrônica</h2>
+                <span class="card-icone">🧬</span>
+                <h2 class="card-titulo">Distribuição Eletrônica</h2>
             </div>
-    
+
             <p class="card-descricao">
-            Calcule  como os elétrons se organizam ao redor do núcleo de um átomo.
+                Calcule como os elétrons se organizam ao redor do núcleo de um átomo.
             </p>
 
-    
-    
-            <div class="campo-grupo">
-              <label class="campo-label" for="composto">
-                Número atômico:
-              </label>
-            </div>
-    
-            <div class="campo-grupo">
-              <label class="campo-label" for="moles">
-                Digite aqui o número atômico:
-              </label>
-              <input
-                class="campo-input"
-                step="any"
-                min="0"
-              />
-            </div>
-    
-    
-            <button class="botao">
-              Distribuir
-            </button>
-    
-            <div class="resultado" id="resultado-massa">
-              O resultado aparecerá aqui.
-            </div>
-          </div>
+            <form method="POST" action="/distribuicao">
+
+                <div class="campo-grupo">
+                    <label class="campo-label" for="numero_atomico">
+                        Número atômico:
+                    </label>
+
+                    <input
+                        class="campo-input"
+                        type="number"
+                        id="numero_atomico"
+                        name="numero_atomico"
+                        min="1"
+                        max="118"
+                        step="1"
+                        placeholder="Digite o número atômico"
+                        required
+                    >
+                </div>
+
+                <button class="botao" type="submit">
+                    Distribuir
+                </button>
+
+            </form>
+
+            {% if resultado %}
+                <div class="resultado">
+                    <h2>Resultado</h2>
+                    <p>{{ resultado }}</p>
+                </div>
+            {% else %}
+                <div class="resultado">
+                    O resultado aparecerá aqui.
+                </div>
+            {% endif %}
+
         </div>
     </main>
-    </body>
+
+</body>
 </html>
+```
