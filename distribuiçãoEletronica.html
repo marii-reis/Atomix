@@ -1,15 +1,8 @@
 <html>
     <head>
-      <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-      <header class="cabecalho">
-        <nav>
-            <ul class="menu">
-            <li><a href="/">Início</a></li>
-            </ul>
-        </nav>
-        </header>
         <main>
         <div class="card">
             <div class="card-topo">
@@ -21,17 +14,22 @@
             Calcule  como os elétrons se organizam ao redor do núcleo de um átomo.
             </p>
 
-            <form method="POST">    
+    
+    
             <div class="campo-grupo">
-              <label class="campo-label">
+              <label class="campo-label" for="composto">
+                Número atômico:
+              </label>
+            </div>
+    
+            <div class="campo-grupo">
+              <label class="campo-label" for="moles">
                 Digite aqui o número atômico:
               </label>
               <input
                 class="campo-input"
                 step="any"
-                min="1"
-                max="118"
-                name="numero_atomico"
+                min="0"
               />
             </div>
     
@@ -39,12 +37,12 @@
             <button class="botao">
               Distribuir
             </button>
-            </form>
-            {% if resultado %}
+    
             <div class="resultado" id="resultado-massa">
-                {{ resultado }}
+              O resultado aparecerá aqui.
             </div>
-            {% endif %}
+          </div>
+        </div>
         <div class="imagem-container">
              <img src="distribuicaoletronica.webp" width="5000">
         </div>

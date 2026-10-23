@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, send_from_directory
 
 
-app = Flask(__name__, template_folder=".", static_folder=".")
-
+app = Flask(
+    __name__,
+    template_folder=".",
+    static_folder=".",
+    static_url_path=""
+)
 
 @app.route("/style.css")
 def servir_css():
