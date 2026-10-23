@@ -1,5 +1,5 @@
 :root {
-    --azul-forte:   #1d4ed8;   /* Botões, destaques */
+    --azul-forte:   #3b82f6;   /* Botões, destaques */
     --azul-medio:   #3b82f6;   /* Bordas, hover */
     --azul-claro:   #dbeafe;   /* Fundo de fórmulas, escala */
     --cinza-escuro: #374151;   /* Texto principal */
@@ -22,6 +22,8 @@
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
     min-height: 100vh; /* deixa na tela toda */
+    display:flex;
+    flex-direction: column;
   }
   
   
@@ -36,7 +38,7 @@
   .menu {
       list-style: none;
       display: flex;
-      background-color: #1d4ed8;
+      background-color:#3b82f6;
       margin: 0;
       padding: 0;
   }
@@ -127,14 +129,13 @@
     margin-bottom: 6px;
   }
   
-  .logo-icone {
-    font-size: 36px;
-  }
   
   .logo-nome {
-    font-size: 32px;
+    font-size: 45px;
     font-weight: 700;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
+    text-transform: uppercase; 
+    font-family: Verdana;
   }
   
   .cabecalho-subtitulo {
@@ -147,9 +148,12 @@
   
   /* parte principal */
   .principal {
-    max-width: 960px;
+    max-width: 900px;
     margin: 0 auto;      
-    padding: 40px 24px;
+    display: flex;
+    padding: 60px 24px;
+    flex:1;
+    align-items: center;
   }
   
   
@@ -160,7 +164,7 @@
   }
   
   .titulo-principal {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--cinza-escuro);
     margin-bottom: 8px;
@@ -277,18 +281,20 @@
   
   /* botao */
   .botao {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 320px;      
+    height: 130px;
     background-color: var(--azul-forte);
     color: var(--branco);
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     cursor: pointer;        
     transition: background-color 0.2s, transform 0.1s;
+    
   }
   
   /* Efeito  mouse */
@@ -498,6 +504,8 @@ button:hover{
     grid-template-columns: repeat(3, 250px);
     justify-content: center;
     gap: 20px;
+
+    
 }
 
 .boas-vindas {
@@ -578,13 +586,13 @@ button:hover{
     margin-top: 0;
 }
 
-/* Ajuste exclusivo da página de Distribuição Eletrônica */
 main.pagina-distribuicao {
     display: block !important;
     width: 100% !important;
     max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important; 
+
 }
 
 main.pagina-distribuicao > .card {
@@ -607,4 +615,20 @@ main.pagina-distribuicao .resultado {
 
 main.pagina-distribuicao .resultado {
     min-height: 150px;
+}
+
+.botao-calcular {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.botao-calcular:hover {
+    background-color: #1e40af;
 }

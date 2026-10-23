@@ -363,9 +363,9 @@ def equacoes():
 
 
 # ESTEQUIOMETRIA
-@app.route("/estequiometria")
+@app.route("/estequiometria", methods=["GET", "POST"])
 def estequiometria():
-    return render_template("estequimetria.html")
+    return render_template("estequiometria.html")
 
 
 if __name__ == "__main__":
